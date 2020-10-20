@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Madera", "Madera.csproj", "{704BB101-96CE-4B45-BB33-578703A558CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Madera", "src/Madera.csproj", "{704BB101-96CE-4B45-BB33-578703A558CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
