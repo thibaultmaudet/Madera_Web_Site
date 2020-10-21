@@ -1,14 +1,249 @@
-<h1>Hello, world!</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
-</ul>
-<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>
+
+  <!-- container section start 
+  <section id="container" class="">
+
+
+    
+    
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <!--overview start-->
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-laptop"></i> Tableau de Bord</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index.html">Accueil</a></li>
+              <li><i class="fa fa-laptop"></i>Tableau de Bord</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box blue-bg">
+              <i class="fa fa-cloud-download"></i>
+              <div class="count">6.674</div>
+              <div class="title">Clients</div>
+            </div>
+            <!--/.info-box-->
+          </div>
+          <!--/.col-->
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box brown-bg">
+              <i class="fa fa-shopping-cart"></i>
+              <div class="count">7.538</div>
+              <div class="title">Purchased</div>
+            </div>
+            <!--/.info-box-->
+          </div>
+          <!--/.col-->
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box dark-bg">
+              <i class="fa fa-thumbs-o-up"></i>
+              <div class="count">4.362</div>
+              <div class="title">Devis</div>
+            </div>
+            <!--/.info-box-->
+          </div>
+          <!--/.col-->
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box green-bg">
+              <i class="fa fa-cubes"></i>
+              <div class="count">1.426</div>
+              <div class="title">Stock</div>
+            </div>
+            <!--/.info-box-->
+          </div>
+          <!--/.col-->
+
+        </div>
+        <!--/.row-->
+
+
+
+        <!-- Today status end -->
+
+
+
+       
+
+
+        <!-- statics end -->
+        <!-- project team & activity start -->
+        <div class="row">
+          
+
+          <div class="col-lg-12">
+            <!--Project Activity start-->
+            <section class="panel">
+              <div class="panel-body progress-panel">
+                <div class="row">
+                  <div class="col-lg-8 task-progress pull-left">
+                    <h1>A faire</h1>
+                  </div>
+                  <div class="col-lg-4">
+                    <span class="profile-ava pull-right">
+                      <img alt="" class="simple" src="img/avatar1_small.jpg">
+                      Jenifer smith
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <table class="table table-hover personal-task">
+                <tbody>
+                  <tr>
+                    <td>Today</td>
+                    <td>
+                      web design
+                    </td>
+                    <td>
+                      <span class="badge bg-important">Upload</span>
+                    </td>
+                    <td>
+                      <span class="profile-ava">
+                        <img alt="" class="simple" src="img/avatar1_small.jpg">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Yesterday</td>
+                    <td>
+                      Project Design Task
+                    </td>
+                    <td>
+                      <span class="badge bg-success">Task</span>
+                    </td>
+                    <td>
+                      <div id="work-progress2"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>21-10-14</td>
+                    <td>
+                      Generate Invoice
+                    </td>
+                    <td>
+                      <span class="badge bg-success">Task</span>
+                    </td>
+                    <td>
+                      <div id="work-progress3"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>22-10-14</td>
+                    <td>
+                      Project Testing
+                    </td>
+                    <td>
+                      <span class="badge bg-primary">To-Do</span>
+                    </td>
+                    <td>
+                      <span class="profile-ava">
+                        <img alt="" class="simple" src="img/avatar1_small.jpg">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>24-10-14</td>
+                    <td>
+                      Project Release Date
+                    </td>
+                    <td>
+                      <span class="badge bg-info">Milestone</span>
+                    </td>
+                    <td>
+                      <div id="work-progress4"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>28-10-14</td>
+                    <td>
+                      Project Release Date
+                    </td>
+                    <td>
+                      <span class="badge bg-primary">To-Do</span>
+                    </td>
+                    <td>
+                      <div id="work-progress5"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Last week</td>
+                    <td>
+                      Project Release Date
+                    </td>
+                    <td>
+                      <span class="badge bg-primary">To-Do</span>
+                    </td>
+                    <td>
+                      <div id="work-progress1"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>last month</td>
+                    <td>
+                      Project Release Date
+                    </td>
+                    <td>
+                      <span class="badge bg-success">To-Do</span>
+                    </td>
+                    <td>
+                      <span class="profile-ava">
+                        <img alt="" class="simple" src="img/avatar1_small.jpg">
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <!--Project Activity end-->
+          </div>
+        </div><br><br>
+
+        <div class="row">
+          <div class="col-md-12 portlets">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2><strong>Calendrier</strong></h2>
+                <div class="panel-actions">
+                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+                </div>
+
+              </div><br><br><br>
+              <div class="panel-body">
+                <!-- Widget content -->
+                <!-- Below line produces calendar. I am using FullCalendar plugin. -->
+                <div id="calendar"></div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- project team & activity end -->
+
+      </section>
+      <div class="text-right">
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+          -->
+          Designed by <a href="">S.T</a>
+        </div>
+      </div>
+    </section>
+    <!--main content end-->
+  
+ 
+
+
