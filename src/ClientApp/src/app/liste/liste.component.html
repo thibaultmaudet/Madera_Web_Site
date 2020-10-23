@@ -17,6 +17,12 @@
             <h3>Listes</h3>
 
           </header>
+          
+            <div class="col-sm list-action-button">
+              
+              <a href="#" routerLink="ajouter" class="btn btn-link float-right fa fa-file fa-lg action-label">Ajouter</a>
+            </div>
+          
           <div class="panel-body">
             <table class="table table-bordered table-striped">
               <thead>
@@ -32,7 +38,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let product of products | async; index as i">
+                <tr *ngFor="let client of clients | async; index as i">
                   <th scope="row">{{ i + 1 }}</th>
                   <td>{{ client.nom }}</td>
                   <td>{{ client.adresse }}</td>
@@ -40,8 +46,8 @@
                   <td>{{ client.ville }}</td>
                   <td>{{ client.telephone }}</td>
                   <td>{{ client.mobile }}</td>
-                  <td><button class='fa fa-eye' (click)='viewClient(client)'></button></td>
-                  <td><button class='delete-label fa fa-trash-o' (click)='SupprimerClientt(client)'></button></td>
+                  <td><button class='fa fa-eye' (click)='voirClient(client)'></button></td>
+                  <td><button class='delete-label fa fa-trash-o' (click)='supprimerClient(client)'></button></td>
                 </tr>
               </tbody>
             </table>
@@ -50,5 +56,4 @@
       </div>
     </div>
   </section>
-
 </section>

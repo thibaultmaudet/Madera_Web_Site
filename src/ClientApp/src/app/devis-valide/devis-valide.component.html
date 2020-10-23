@@ -1,0 +1,54 @@
+<section id="main-content">
+  <section class="wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="page-header"><i class="fa fa-th"></i>Liste devis</h3>
+        <ol class="breadcrumb">
+          <li><i class="fa fa-home"></i><a href="index.html">Accueil</a></li>
+          <li><i class="fa fa-desktop"></i>Devis</li>
+          <li><i class="fa fa-th"></i>Liste devis</li>
+        </ol>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <section class="panel">
+          <header class="panel-heading">
+            <h3>Liste devis</h3>
+
+          </header>
+          <div class="panel-body">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Ref</th>
+                  <th>Nom ou Raison Social</th>
+                  <th>Games</th>
+                  <th>sections</th>
+                  <th>Montant</th>
+                  <th>Remplissage</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let client of clients | async; index as i">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ devis.nom }}</td>
+                  <td>{{ devis.gammes }}</td>
+                  <td>{{ devis.sections }}</td>
+                  <td>{{ devis.montant }}</td>
+                  <td>{{ devis.remplissage }}</td>
+                  
+                 <!-- <td><button class='fa fa-eye' (click)='viewClient(client)'></button></td>
+                  <td><button class='delete-label fa fa-trash-o' (click)='SupprimerClientt(client)'></button></td>-->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+</section>
+
