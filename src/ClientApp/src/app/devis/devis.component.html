@@ -23,9 +23,13 @@
             <div class="panel-body">
               <form [formGroup]="devis" class="form-horizontal " (ngSubmit)="Enregistrer()">
                 <div class="form-group">
+                  {{ clients | json }}
                   <label class="col-sm-3 control-label">Nom ou Raison Sociale</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" formControlName="nom">
+                    <select formControlName="nom">
+                      <option [ngValue]="" disabled>Choose your client</option>
+                      <option *ngFor="let client of clients" [ngValue]="client">{{ client.name }}</option>
+                    </select>
                   </div>
                 </div>
 

@@ -14,6 +14,7 @@ import { ListeComponent } from './liste/liste.component';
 import { VoirClientComponent } from './voir-client/voir-client.component';
 import { LoginComponent } from './login/login.component';
 import { DevisValideComponent } from './devis-valide/devis-valide.component';
+import { Services } from './services';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { DevisValideComponent } from './devis-valide/devis-valide.component';
     ])
   ],
   providers: [
-   
+    Services
   ],
   bootstrap: [AppComponent]
 })
