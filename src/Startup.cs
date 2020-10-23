@@ -1,18 +1,23 @@
+using Madera.Contracts.Services;
+using Madera.Helpers;
+using Madera.Models.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace Madera
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostEnvironment hostEnvironment)
         {
-            Configuration = configuration;
+            IConfigurationBuilder configurationBuilder = new ConfigurationBuilder().SetBasePath(hostEnvironment.ContentRootPath).AddJsonFile(string.Format("appsettings.{0}.json", hostEnvironment.EnvironmentName), optional: true, reloadOnChange: true);
+
+            Configuration = configurationBuilder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -21,6 +26,16 @@ namespace Madera
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            // Add configuration data include in appsettings.{env}.json
+            services.Configure<DataBase>(Configuration.GetSection("DataBase"));
+
+            // Add singleton
+            services.AddSingleton<IDataBaseHelper, DataBaseHelper>();
+            services.AddSingleton<INamedQueryHelper, NamedQueryHelper>();
+
+            services.AddLogging().AddTransient<NamedQueryHelper>();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

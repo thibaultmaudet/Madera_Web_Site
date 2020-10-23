@@ -26,7 +26,7 @@ export class ListeComponent implements OnInit {
   }
 
   voirClient(client: IClient): void {
-    this.router.navigate(['clients/voir/' + client.id]);
+    this.router.navigate(['voir-client/voir/' + client.id]);
   }
 
 }
